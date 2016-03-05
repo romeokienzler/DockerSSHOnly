@@ -18,10 +18,15 @@ ssh -p `docker ps |grep sshservice|awk -F":" '{print $2}'|awk -F"-" '{print $1}'
 ## Push it to IBM Bluemix Container Service
 Prerequisites:
 1. An IBM Cloud Account: http://ibm.biz/joinIBMCloud
+
 2. The CF tool and IC plugin installed: https://www.ng.bluemix.net/docs/containers/container_cli_cfic.html
 
 cf login
+
 cf ic login
+
 docker tag sshservice registry.ng.bluemix.net/yourRegistry/sshservice
+
 docker push registry.ng.bluemix.net/yourRegistry/sshservice
+
 
