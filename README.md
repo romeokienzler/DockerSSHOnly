@@ -45,11 +45,11 @@ Then:
 5. run the generated *export* command like
 export KUBECONFIG=/Users/romeokienzler/.bluemix/plugins/container-service/clusters/mycluster/kube-config-hou02-mycluster.yml
 
-6. run it: kubectl run sshonly-deployment --image=us.icr.io/rkie/sshonly:latest
+6. run it: kubectl run sshonly-deployment --image=us.icr.io/myns/sshonly:latest
 
 7. export the ssh port: kubectl expose deployment/sshonly-deployment --type=NodePort --port=22 --name=sshyonly-service --target-port=22
 
-8. get the port and ip: kubectl describe service hello-world-service
+8. get the port and ip: kubectl describe service sshyonly-service
 
 9. ssh to the cluster: ssh -p 30505 root@184.172.242.248
 
